@@ -1,5 +1,19 @@
-template-repository (1.0-1) unstable; urgency=medium
+speexdsp (1.2.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release. (Closes: #1014555)
+  * debian/watch: Monitor upstream tarball.
+  * debian/upstream/signing-key.asc: Monitor upstream signature.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Boyuan Yang <byang@debian.org>  Sat, 17 Sep 2022 13:48:41 -0400
+
+speexdsp (1.2.0-1) unstable; urgency=medium
+
+  * Upload to unstable. 
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 14 Apr 2022 14:43:14 -0400
+
+speexdsp (1.2.0-1~exp1) experimental; urgency=medium
+
+  * Initial release, split out from src:speex.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 01 Apr 2022 18:39:59 -0400

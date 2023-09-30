@@ -1,15 +1,50 @@
-Source: template-repository
-Section: unknown
+Source: speexdsp
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Section: sound
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ Boyuan Yang <byang@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ pkg-config,
+Standards-Version: 4.6.0
+Homepage: http://www.speex.org/
+Vcs-Git: https://salsa.debian.org/multimedia-team/speexdsp.git
+Vcs-Browser: https://salsa.debian.org/multimedia-team/speexdsp
 
-Package: template-repository
+Package: libspeexdsp-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Multi-Arch: same
+Section: libdevel
+Depends:
+ libspeexdsp1 (= ${binary:Version}),
+ ${misc:Depends},
+Suggests:
+ libspeex-dev,
+ pkg-config,
+ speex-doc,
+Description: DSP library derived from speex (development files)
+ Speex is an audio codec especially designed for compressing voice at low
+ bit-rates for applications such as voice over IP (VoIP). In some senses,
+ it is meant to be complementary to the Vorbis codec which places a greater
+ emphasis on high-quality music reproduction.
+ .
+ This package provides the speex dsp library headers and development files.
+
+Package: libspeexdsp1
+Architecture: any
+Multi-Arch: same
+Section: libs
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: DSP library derived from speex
+ Speex is an audio codec especially designed for compressing voice at low
+ bit-rates for applications such as voice over IP (VoIP). In some senses,
+ it is meant to be complementary to the Vorbis codec which places a greater
+ emphasis on high-quality music reproduction.
+ .
+ This package provides the runtime library of additional DSP functions that
+ are part of the Speex distribution.
