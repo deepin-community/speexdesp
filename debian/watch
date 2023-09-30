@@ -1,0 +1,4 @@
+version=4
+opts="pgpmode=auto" \
+ https://downloads.us.xiph.org/releases/speex/ \
+ speexdsp-@ANY_VERSION@@ARCHIVE_EXT@
